@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MetaSchema.json" />
+    <None Remove="Schema.json" />
+    <None Remove="Data.json" />
+    <None Remove="JsonSchema.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MetaSchema.json" />
+    <EmbeddedResource Include="Schema.json" />
+    <EmbeddedResource Include="Data.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="JsonSchema.Net" Version="1.11.6" />
+  </ItemGroup>
+</Project>
